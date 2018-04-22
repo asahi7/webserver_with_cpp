@@ -2,6 +2,8 @@
 
 Simple web server implemented in C++. Computer Networks project.
 
+Using multithreading and thread pool.
+
 ## In Terminal:
 
 make
