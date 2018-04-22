@@ -68,20 +68,17 @@ int main(int argc, char *argv[]) {
             exit(-1);
         }
 
-        /*int pid = fork();
+        int pid = fork();
         if (pid == 0) {
             respond(newsockfd);
             close(newsockfd);
             exit(0);
         } else if (pid > 0) {
-            //close(newsockfd);
+            close(newsockfd);
         } else {
             printf("Error occured while forking");
             exit(-1);
-        }*/
-
-        // TODO : implement processing. there are three ways - single threaded, multi threaded, thread pooled
-        respond(newsockfd);
+        }
     }
 
     return 0;
