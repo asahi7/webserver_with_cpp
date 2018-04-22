@@ -9,6 +9,7 @@
 #include <fstream>
 #include <sys/stat.h>
 #include <string>
+#include "threadpool/ThreadPool.h"
 
 #define PORT 5000
 
@@ -60,6 +61,8 @@ int main(int argc, char *argv[]) {
 
     clilen = sizeof(serv_addr);
 
+    ThreadPool pool(4);
+
     while (1) {
         /* Acccepting connections */
         int newsockfd = accept(sockfd, (struct sockaddr *) &serv_addr, (socklen_t *) &clilen);
@@ -68,16 +71,10 @@ int main(int argc, char *argv[]) {
             exit(-1);
         }
 
-        int pid = fork();
-        if (pid == 0) {
-            respond(newsockfd);
-            exit(0);
-        } else if (pid > 0) {
-            close(newsockfd);
-        } else {
-            printf("Error occured while forking");
-            exit(-1);
-        }
+        pool.enqueue([](int newsock) {
+                         respond(newsock);
+                     }, newsockfd
+        );
     }
 
     return 0;
@@ -88,7 +85,7 @@ void send_file(const char *response, int sock, int len) {
 }
 
 void send_headers(const char *response, int sock) {
-    std::cout << response << std::endl;
+    // std::cout << response << std::endl;
     send(sock, response, strlen(response), 0);
     send(sock, "\n", 1, 0);
 }
@@ -120,6 +117,8 @@ void respond(int sock) {
     std::string response;
     const char *delim = "\r\n\r\n";
 
+    // std::cout << sock << "Thread ID: " << pthread_self() << std::endl;
+
     bzero(buffer, 9999);
     n = recv(sock, buffer, 9999, 0);
     if (n < 0) {
@@ -131,7 +130,7 @@ void respond(int sock) {
     } else {
         char *token = strtok(buffer, delim);
 
-        std::cout << token << std::endl;
+        // std::cout << token << std::endl;
 
         if (strncmp("GET", token, 3) != 0) {
             std::cout << "Only GET method works" << std::endl;
@@ -154,7 +153,7 @@ void respond(int sock) {
                        "Connection: keep-alive\r\n";
             in.open(ROOT + path.c_str(), std::ios::binary);
             in.seekg(0, std::ios::beg);
-            std::cout << "IMG SIZE: " << std::to_string(get_file_size(ROOT + path.c_str())) << std::endl;
+            // std::cout << "IMG SIZE: " << std::to_string(get_file_size(ROOT + path.c_str())) << std::endl;
             response += "Content-Length: " + std::to_string(get_file_size(ROOT + path.c_str())) + "\r\n";
             send_headers(response.c_str(), sock);
             while (!in.eof() && in.is_open()) {
@@ -170,11 +169,11 @@ void respond(int sock) {
             std::string contents((std::istreambuf_iterator<char>(in)), std::istreambuf_iterator<char>());
             response += "Content-Length: " + std::to_string(get_file_size(ROOT + path.c_str())) + "\r\n";
             send_headers(response.c_str(), sock);
-            std::cout << ROOT + path.c_str() << std::endl << response << std::endl;
+            // std::cout << ROOT + path.c_str() << std::endl << response << std::endl;
             send_file(contents.c_str(), sock, strlen(contents.c_str()));
         }
 
-        std::cout << std::endl;
+        // std::cout << std::endl;
     }
 
     shutdown(sock, SHUT_RDWR);
