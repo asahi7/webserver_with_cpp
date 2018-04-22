@@ -71,7 +71,6 @@ int main(int argc, char *argv[]) {
         int pid = fork();
         if (pid == 0) {
             respond(newsockfd);
-            close(newsockfd);
             exit(0);
         } else if (pid > 0) {
             close(newsockfd);
