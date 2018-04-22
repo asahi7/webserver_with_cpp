@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="webserver_skeleton"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="webserver_skeleton">
+				<Option output="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/webserver_skeleton" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/threadpool"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 webserver_skeleton"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="webserver_skeleton/fast">
+				<Option output="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/webserver_skeleton" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/threadpool"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 webserver_skeleton/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/server.cpp">
+			<Option target="webserver_skeleton"/>
+		</Unit>
+		<Unit filename="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/thread/ex1.cpp">
+			<Option target="webserver_skeleton"/>
+		</Unit>
+		<Unit filename="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/thread/ex2.cpp">
+			<Option target="webserver_skeleton"/>
+		</Unit>
+		<Unit filename="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/thread/ex3.cpp">
+			<Option target="webserver_skeleton"/>
+		</Unit>
+		<Unit filename="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/thread/ex4.cpp">
+			<Option target="webserver_skeleton"/>
+		</Unit>
+		<Unit filename="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/threadpool/ThreadPool.h">
+			<Option target="webserver_skeleton"/>
+		</Unit>
+		<Unit filename="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/threadpool/example.cpp">
+			<Option target="webserver_skeleton"/>
+		</Unit>
+		<Unit filename="/Users/admin/Documents/UNIST/7semester/Comp_networks/webserver-skeleton/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
